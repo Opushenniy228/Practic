@@ -12,5 +12,13 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run(){
+                startActivities(new Intent[]{new Intent(HomeActivity.this, Home2.class)});
+                finish();
+            }
+        },2000);
     }
 }
